@@ -22,3 +22,30 @@ a python dev environment specifically for machine-learning
 
 ### Coure materials
 http://sundog-education.com/machine-learning/
+
+### Python Notes
+- python syntax overview
+  - whitespace matters
+  - importing modules ```import mod as m```
+  - lists (~js arrays)
+    - ```thisArr.length``` ~ ```len(thisArr)```
+    - thisArr[:numberHere] returns first numberHere element of list
+    - thisArr[numberHere:] return last numberHere elements
+    - merge 2 lists using arr1.extend(newArr)
+  - Tuples
+    - immutable lists
+    - handy for functional programming or systems like Apache Spark
+    - ```thisTuple = (1,2,3)```
+    - ```len(thisTuple)```
+    - ```thisTuple[1]```
+  - Dictionaries
+    - like a map/hashtable/object
+    - ```thisDict = {}``` 
+    - ```thisDict["animal"] = "dog" ```
+   - Functions
+	   - lambda are inline nameless fns
+	   - ```lambda param: param logic```
+	   - USING: ```lambda x: x * x, 3``` should return 9
+
+
+
