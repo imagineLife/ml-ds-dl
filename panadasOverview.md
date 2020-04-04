@@ -60,7 +60,19 @@ The primary pandas data structure.
 - get a specific column by name, returns a new dataFrame
 #### df[colName][:int]
 - returns a new dataFrame that is the :int number of rows in the colName column
-#### df.size
-- number of unique data-points (13 * 5)
-#### len(df)
-- spits out number of rows
+#### df[[col1, col2]]
+- returns a new dataFrame that is 2 columns from the source
+#### df[[col1, col2]][:5]
+- returns a new dataFrame that is the first 5 rows of those 2 columns
+#### df.sort_values([colName])
+- returns a new dataFrame that is sorted by columnName
+#### df[colOne].value_counts()
+- returns a new dataFrame returns the COUNTS of each VALUE in the the COLUMN given
+
+### Visualizing
+notice the **plot** keyword:
+```
+degree_counts = df['Level of Education'].value_counts()
+degree_counts.plot(kind='bar')
+```
+matplotlib displays a bar chart in the python notebook
