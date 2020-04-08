@@ -142,3 +142,25 @@ plt.xlabel('time')
 plt.ylabel('my overall health')
 ```
 
+
+## Pie Chart
+```
+# Remove XKCD mode:
+plt.rcdefaults()
+
+# slice values
+values = [12, 55, 4, 32, 14]
+
+# slice colors
+colors = ['r', 'g', 'b', 'c', 'm']
+
+# which items are 'sticking out' from the pie
+explode = [0, 0, 0.2, 0, 0]
+
+#slice labels
+labels = ['India', 'United States', 'Russia', 'China', 'Europe']
+
+plt.pie(values, colors= colors, labels=labels, explode = explode)
+plt.title('Student Locations')
+plt.show()
+```
