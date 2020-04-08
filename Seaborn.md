@@ -72,3 +72,17 @@ ax.set_xticklabels(ax.get_xticklabels(),rotation=45)
 ax=sns.swarmplot(x='Mfr Name', y='CombMPG', data=df)
 ax.set_xticklabels(ax.get_xticklabels(),rotation=45)
 ```
+
+## CountPlot
+- a histogram... for categorical data
+```
+ax=sns.countplot(x='Mfr Name', data=df)
+ax.set_xticklabels(ax.get_xticklabels(),rotation=45)
+```
+
+
+## Heatmap
+```
+df2 = df.pivot_table(index='Cylinders', columns='Eng Displ', values='CombMPG', aggfunc='mean')
+sns.heatmap(df2)
+```
