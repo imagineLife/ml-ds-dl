@@ -47,9 +47,28 @@ sns.scatterplot(x="Eng Displ", y="CombMPG", data=df)
 - interesting, scatterplot with 2 extra bar charts
 	- one bar chart / histo above the scatter
 	- one bar chart / histo to the right of the scatter, a horizontal bar
-
+```
+sns.jointplot(x="Eng Displ", y="CombMPG", data=df)
+```
 ## lmplot
 - scatterplot with linear-regression line overlay 
 	- ...fitting a best-fit line to the data
+```
+sns.lmplot(x="Eng Displ", y="CombMPG", data=df)
+```
+## Box && Whisker
+```
+sns.set(rc={'figure.figsize':(15,5)})
+ax=sns.boxplot(x='Mfr Name', y='CombMPG', data=df)
+ax.set_xticklabels(ax.get_xticklabels(),rotation=45)
+```
+- figure-size makes the thing bigger
+- ax stores the boxplot itself
+- the tick-labels are set from the ax.get_xticklabels()
+	- rotated 45 degress
 
-
+## Swarm Plot
+```
+ax=sns.swarmplot(x='Mfr Name', y='CombMPG', data=df)
+ax.set_xticklabels(ax.get_xticklabels(),rotation=45)
+```
