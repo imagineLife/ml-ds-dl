@@ -164,3 +164,38 @@ plt.pie(values, colors= colors, labels=labels, explode = explode)
 plt.title('Student Locations')
 plt.show()
 ```
+
+
+## Bar Chart
+```
+# bar values
+values = [12, 55, 4, 32, 14]
+barCount = len(values)
+colors = ['r', 'g', 'b', 'c', 'm']
+plt.bar(range(0,barCount), values, color= colors)
+plt.show()
+```
+
+## Scatterplot
+```
+from pylab import randn
+
+X = randn(500)
+Y = randn(500)
+plt.scatter(X,Y)
+plt.show()
+```
+
+## Box && Whisker
+```
+uniformSkewed = np.random.rand(100) * 100 - 40
+high_outliers = np.random.rand(10) * 50 + 100
+low_outliers = np.random.rand(10) * -50 - 100
+boxPlotData = np.concatenate((uniformSkewed, high_outliers, low_outliers))
+plt.boxplot(boxPlotData)
+plt.show()
+```
+- box = two inner quartiles, 50% of the data
+	- outer 25% of data on either side of the box
+- Whiskers separate outliers (hz lines)
+- OUTLIERS: anything beyond 1.5x the inner-quartile range
