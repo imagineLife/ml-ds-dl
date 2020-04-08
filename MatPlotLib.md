@@ -91,3 +91,54 @@ plt.plot(x, norm.pdf(x, 1.0, 0.5))
 plt.show()
 ```
 
+## Line Types && Colors
+```
+axes = plt.axes()
+axes.set_xlim([-5, 5])
+axes.set_ylim([0, 1.0])
+axes.set_xticks([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5])
+axes.set_yticks([0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+axes.grid()
+plt.plot(x, norm.pdf(x), 'b-') //blue solid
+plt.plot(x, norm.pdf(x, 1.0, 0.5), 'r:') //red dashed
+plt.show()
+```
+
+
+## Labeled Axes
+```
+axes = plt.axes()
+axes.set_xlim([-5, 5])
+axes.set_ylim([0, 1.0])
+axes.set_xticks([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5])
+axes.set_yticks([0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+axes.grid()
+plt.xlabel('Greebles')
+plt.ylabel('Probability')
+plt.plot(x, norm.pdf(x), 'b-')
+plt.plot(x, norm.pdf(x, 1.0, 0.5), 'r:')
+plt.legend(['Sneetches', 'Gacks'], loc=4)
+plt.show()
+```
+
+
+## XKCD style, 'cartoon-y'
+```
+plt.xkcd()
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+plt.xticks([])
+plt.yticks([])
+ax.set_ylim([-30, 10])
+data = np.ones(100)
+data[70:] -= np.arange(30)
+plt.annotate(
+    'THE DAY I REALIZED\nI COULD COOK BACON\nWHENEVER I WANTED',
+    xy=(70, 1), arrowprops=dict(arrowstyle='->'), xytext=(15, -10))
+plt.plot(data)
+plt.xlabel('time')
+plt.ylabel('my overall health')
+```
+
