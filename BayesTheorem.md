@@ -33,5 +33,6 @@ THEOREM in-process
 			- probability of testing positive if you DO use
 			- PLUS
 			- probability of testing positive if you DON'T use
+			- comes out to 1.3%, or .013
 		- probBeingAUser = P(A) = .003 (.03%)
 		- probTestingPositiveAsAUser = P(B | A) = .003 * .99 (.03% * 99%) = .00397
