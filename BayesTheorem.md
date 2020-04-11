@@ -13,3 +13,25 @@ The Probability of A Given B, is...
 
 P(A | B) =  ( P(A) P(B|A) ) / P(B)
 
+Example
+- a drug test
+	- can produce a positive result, LEADING to a potential positive USER result
+	- BUT 
+	- testing positive doesn't explicitly mean that the person is a USER
+
+BAYE'S Theorem to the rescue!!
+Say
+- a drug test claims '99% accuracy' in users of a drug, drugZ
+- .3% of the population ACTUALLY uses drugZ
+- the 99%, here, isn't high-enough to be helpful, SAYS BAYE'S 
+- A, is a user of the drug
+- B, tested positively for the drug
+
+THEOREM in-process
+	- probOfUsingDrug, Given that you tested positively...
+		- probabilityOfTestingPositively = ( .99 * .003 ) + ( .01 * .997 )...
+			- probability of testing positive if you DO use
+			- PLUS
+			- probability of testing positive if you DON'T use
+		- probBeingAUser = P(A) = .003 (.03%)
+		- probTestingPositiveAsAUser = P(B | A) = .003 * .99 (.03% * 99%) = .00397
